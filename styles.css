@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 添加以下样式用于插件环境 */
+body.extension-mode {
+    width: 500px;
+    padding: 0;
+}
+
+.extension-mode .container {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* 新增：在插件环境下调整 textarea 的高度 */
+.extension-mode textarea {
+    height: 250px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 40px; /* 调整 logo 大小 */
+    height: auto;
+    margin-right: 10px; /* logo 和标题之间的间距 */
+}
+
+h1 {
+    color: #333;
+    font-size: 32px; /* 稍微减小字体大小以适应布局 */
+    margin: 0; /* 移除默认的 margin */
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+textarea {
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 16px;
+    background-color: #ff2442;
+    color: white;
+    border: none;
+    border-radius: 8px; /* 将圆角从4px改为8px */
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
+}
+
+button:hover {
+    background-color: #e60026;
+}
+
+#imageContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imageContainer img,
+#imageContainer canvas {
+    max-width: 100%;
+    height: auto; /* 确保图片保持比例 */
+    margin-bottom: 20px;
+    display: block;
+    border: 1px solid #ddd; /* 添加边框以便于查看 */
+    border-radius: 8px;
+}
+
+.checkbox-container {
+    margin-top: 16px; /* 为复选框容器添加16像素的上边距 */
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+input[type="checkbox"] {
+    width: 20px; /* 设置复选框的宽度为20px */
+    height: 20px; /* 设置复选框的高度为20px */
+    cursor: pointer; /* 鼠标悬停时显示指针样式 */
+    margin: 0; /* 移除默认边距 */
+    vertical-align: middle; /* 垂直居中 */
+}
+
+/* 为了确保标签与复选框对齐 */
+.checkbox-container label {
+    display: inline-block; /* 使用inline-block以便于对齐 */
+    font-size: 16px; /* 设置标签文字大小 */
+    margin-left: 12px; /* 在复选框和标签之间添加一些间距 */
+    line-height: 20px; /* 设置行高与复选框高度相同 */
+    vertical-align: middle; /* 垂直居中 */
+}
+
+#downloadAllButton {
+    background-color: transparent; /* 背景色设置为透明，实现ghost按钮效果 */
+    border: 1px solid #ff2442; /* 使用边框颜色保持与生成图片按钮一致 */
+    color: #ff2442; /* 文本颜保持与生成图片按钮一致 */
+    margin-top: 10px; /* 与上方按钮保持一定距离 */
+}
+
+#downloadAllButton:hover {
+    border-color: #e30e2b;
+    color: #e30e2b;
+}
+
+#downloadMessage {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: #4CAF50;
+    text-align: center;
+    font-weight: bold;
+}

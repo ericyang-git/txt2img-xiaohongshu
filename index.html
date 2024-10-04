@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书一键文转图工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo_xhs.png" alt="小红书 Logo" class="logo">
+            <h1>小红书一键文转图工具</h1>
+        </div>
+        <textarea id="articleContent" rows="10" placeholder="在此粘贴您的文章内容"></textarea>
+        <div class="checkbox-container">
+            <input type="checkbox" id="firstParagraphAsTitle" name="firstParagraphAsTitle" checked>
+            <label for="firstParagraphAsTitle">将第一段作为标题</label>
+        </div>
+        <button id="generateBtn">生成图片</button>
+        <button id="downloadAllButton" style="display: none;">一键下载图片</button>
+        <div id="downloadMessage" style="display: none; margin-top: 10px; text-align: center; color: #4CAF50;"></div>
+        <h2 id="previewTitle" style="display: none;">⬇️ 图片预览 ⬇️</h2>
+        <div id="imageContainer"></div>
+    </div>
+    <script src="marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "小红书一键文转图工具",
+  "version": "1.0",
+  "description": "将长文转换为适合小红书发布的图片格式",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "permissions": [
+    "downloads"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html", "styles.css", "script.js", "marked.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
